@@ -1,0 +1,39 @@
+
+p{
+    text-align: center;
+    font-size: 3rem;
+}
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #745e07;
+}
+
+
+
+
+.nav-link {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+.nav-link li a{
+color: rgb(3, 2, 2);
+  font-size: 18px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav-link li a:hover {
+  color: #ffcc00;
+  
+}
+.nav-link li a:active{
+    color:rgb(66, 35, 35);
+    background-color: rgb(19, 12, 12);
+    box-shadow: inset;
+    opacity: 0.5;
+}

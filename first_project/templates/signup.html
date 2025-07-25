@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Shoe Zone
+{% endblock title %}
+
+
+{% block css %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+{% endblock css %}
+
+
+{% block body %}
+<div class='signup_f'>
+  <div class="sign_d">
+  <h2>Sign Up</h2>
+  </div>
+
+  <div class='sign_f'>
+  <form action="signup.html" method="post">
+    {% csrf_token %}
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br><br>
+
+    <label for="Address">Address:</label><br>
+    <input type="text" id="address" name="address" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="confirm">Confirm Password:</label><br>
+    <input type="password" id="confirm" name="confirm" required><br><br>
+
+    <input type="submit" value="Sign Up" name='submit'>
+  </form>
+</div>
+
+
+</div>
+{% endblock body %}
+
+
+{% block footer %}
+{% endblock footer %}

@@ -1,0 +1,7 @@
+.r1{
+    color: red;
+}
+
+header .active a{
+    background-color: red;
+}

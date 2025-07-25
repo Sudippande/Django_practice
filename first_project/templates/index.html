@@ -1,0 +1,229 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Shoe Zone
+{% endblock title %}
+
+
+{% block css %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+{% endblock css %}
+
+
+{% block body %}
+<div id="carouselExampleCaptions" class="carousel slide my-1" data-bs-ride="carousel">
+  <div class="carousel-indicators my-1">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <img src="/static/img/main4.jpg" class="d-block w-100" alt="main2" height=600px width=380px>
+
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Namaskar Welcome to our online shoe Shop</h5>
+        <p>Here You can Buy and sell Shoe remotely</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/main2.jpg" class="d-block w-100" alt="main2" height=600px width=380px>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Namaskar Welcome to our online shoe Shop</h5>
+        <p>Here You can Buy and sell Shoe remotely</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/main5.jpg" class="d-block w-100" alt="main3" height=600px width=380px>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>TNamaskar Welcome to our online shoe Shop</h5>
+        <p>Here You can Buy and sell Shoe remotely</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<div class="album py-5 bg-light">
+    <div class="container my-2" >
+        <h1 class='text-center my-3'> Here Is the product</h1>
+        <hr>
+
+      <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <a href='image1.html'><img src='/static/img/ola.jpg' height=320px width=420px alt=shoe1></a>
+
+            <div class="card-body my-3">
+              <p class="card-text">Shoe 1<br>Price:Rs5000</p>
+        
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href='image1.html'><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                 <a href="buynow.html"> <button type="button" class="btn btn-sm btn-outline-secondary">Direct Buy</button></a>
+                  <a href="#"><button type='button' class='btn btn-sm btn-outline-secondary'>Add to cart</button></a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src='/static/img/ola1.jpg' height=320px width=420px alt=shoe2>
+
+
+            <div class="card-body">
+              <p class="card-text">Shoe 2<br>Price:Rs6000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Direct Buy</button>
+                  <button type='button' class='btn btn-sm btn-outline-secondary'>Add to cart</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+         <img src="/static/img/shoe2.jpeg"height=320px width=420px alt=shoe1>
+
+            <div class="card-body">
+              <p class="card-text">Shoe 3<br>Price:Rs2000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Direct Buy</button>
+                  <button type='button' class='btn btn-sm btn-outline-secondary'>Add to cart</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src='/static/img/ola2.jpg'height=320px width=420px alt=shoe3>
+
+            <div class="card-body">
+              <p class="card-text">Shoe 4<br>Price:Rs15000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Direct Buy</button>
+                  <button type='button' class='btn btn-sm btn-outline-secondary'>Add to cart</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+             <img src='/static/img/ola3.jpg'height=320px width=420px alt=shoe5>
+
+            <div class="card-body">
+              <p class="card-text">Shoe 5<br>Price:Rs12000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Direct Buy</button>
+                  <button type='button' class='btn btn-sm btn-outline-secondary'>Add to cart</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src='/static/img/ola4.jpg'height=320px width=420px alt=shoe77>
+
+            <div class="card-body">
+              <<p class="card-text">Shoe 6<br>Price:Rs6000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Direct Buy</button>
+                  <button type='button' class='btn btn-sm btn-outline-secondary'>Add to cart</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+             <img src='/static/img/ola5.jpg'height=320px width=420px alt=shoe1>
+
+            <div class="card-body">
+              <p class="card-text">Shoe 7<br>Price:Rs7000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Direct Buy</button>
+                  <button type='button' class='btn btn-sm btn-outline-secondary'>Add to cart</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+             <img src='/static/img/ola6.jpg' height=320px width=420px alt=shoe1>
+
+            <div class="card-body">
+             <p class="card-text">Shoe 8<br>Price:Rs8000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Direct Buy</button>
+                  <button type='button' class='btn btn-sm btn-outline-secondary'>Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+           <img src='/static/img/ola7.jpg'height=320px width=420pxalt=shoe1>
+
+            <div class="card-body">
+              <p class="card-text">Shoe 9<br>Price:Rs10000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Direct Buy</button>
+                  <button type='button' class='btn btn-sm btn-outline-secondary' >Add to cart</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock body %}
+
+
+{% block footer %}
+{% endblock footer %}
+

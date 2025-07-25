@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}
+About Sudip
+{% endblock title %}
+
+{% block body %}
+<style>
+    body {
+        background: #f4f8fb;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .about-card {
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .about-header {
+        color: #0d6efd;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    .about-subtext {
+        color: #6c757d;
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    .about-body p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #343a40;
+    }
+
+    .highlight {
+        color: #0d6efd;
+        font-weight: 600;
+    }
+
+    .about-icon {
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="about-card">
+        <div class="text-center">
+            <svg class="about-icon" width="60" height="60" fill="currentColor" class="bi bi-people-fill text-primary" viewBox="0 0 16 16">
+                <path d="M13 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm-7 2a2 2 0 1 0-2-2 2 2 0 0 0 2 2Zm8 1c1.104 0 2 .896 2 2v1c0 .553-.447 1-1 1H1c-.553 0-1-.447-1-1v-1c0-1.104.896-2 2-2h3.1c.406.58 1.045 1 1.9 1s1.494-.42 1.9-1H14Zm-8 0H2c-.552 0-1 .448-1 1v.993c0 .263.197.48.45.505H6.6c.553 0 1-.447 1-1v-.498c0-.552-.447-1-1-1Z"/>
+            </svg>
+            <h2 class="about-header">About Us</h2>
+            <p class="about-subtext">Who we are, what we do, and why we care.</p>
+        </div>
+
+        <div class="about-body">
+            <div>
+            <img src='/static/img/myself.jpg' height=350px width=280px>
+           <br> <span class="highlight">Founder of Shoe Zone</span>
+            </div>
+            <p class='my-4'>
+                Welcome to <span class="highlight">Shoe Zone</span> this is a best place for the shoe lover.We offer to buy and sell the shoes in very reasonable price</p>
+
+            <p>
+                Our mission is simple: <span class="highlight">Creating this site Nepal number 1  Ecommerce platform for the shoes </span>
+            <p>
+                From humble beginnings, we've grown into a trusted online platform, dedicated to customer satisfaction, creativity, and continuous improvement. At Sudip’s team, every line of code, every design decision, and every interaction is done with purpose and passion.
+            </p>
+
+            <p>
+                Thank you for being part of our journey. We’re excited to keep growing, exploring, and building together!
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+{% block footer %}
+{% endblock footer %}

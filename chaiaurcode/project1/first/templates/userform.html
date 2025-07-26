@@ -1,46 +1,19 @@
-
-p{
-    text-align: center;
-    font-size: 3rem;
-}
-h1 {
-    text-align: center;
-    font-size: 3rem;
-    color: #745e07;
-}
+{% extends "layout.html" %}
+{% load static tailwind_tags %}
+{% load static %}
 
 
 
 
-.nav-link {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-}
-.nav-link li a{
-color: rgb(3, 2, 2);
-  font-size: 18px;
-  transition: color 0.3s;
-  text-decoration: none;
-}
+{% block title %}
+    <h1 class="page-title">Welcome to User Login Form</h1>
+{% endblock %}
 
-.nav-link li a:hover {
-  color: #ffcc00;
-  
-}
-.nav-link li a:active{
-    color:rgb(66, 35, 35);
-    background-color: rgb(19, 12, 12);
-    box-shadow: inset;
-    opacity: 0.5;
-}
-/* form css */
+{% block nav %}{% endblock %}
 
-
- body {
+{% block content %}
+<style>
+    body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background: #f5f7fa;
         margin: 0;
@@ -58,7 +31,7 @@ color: rgb(3, 2, 2);
         max-width: 400px;
         margin: 40px auto;
         padding: 30px;
-        background: #ffffff;
+        background: #100d0dff;
         border-radius: 12px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
@@ -92,3 +65,28 @@ color: rgb(3, 2, 2);
     .form_2 button:hover {
         background-color: #45a049;
     }
+</style>
+{% tailwind_css %}
+<h2 style="text-align:center; color:#555;">Login Form</h2>
+<form method="post" action="{% url "submit_form" %}" class="form_c">
+    {% csrf_token %}
+    <div class="form_1">
+        <label for="username" style=color:red>Username:</label>
+        <input type="text" name="username" id="username" required>
+
+        <label for="password" style=color:red>Password:</label>
+        <input type="password" name="password" id="password" required>
+    </div>
+
+    <div class="form_2">
+        <button type="submit" >Submit</button>
+    </div>
+
+
+
+     <div class="form_2">
+        <input type='text' value='{{output}}'/>
+    </div>
+    
+</form>
+{% endblock %}

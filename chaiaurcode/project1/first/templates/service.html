@@ -1,13 +1,14 @@
-{%load static %}
-<! DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <meta>
-    <link rel='stylesheet' href='{% static 'style.css'%}'>
+{% extends "layout.html" %}
 
-</head>
-<body>
-    <p>Welcome to Service page<p>
-</body>
-</html>
+
+
+{% block title %}
+Service page{% endblock %}
+
+{% block content %}
+<h1>This is a basic Service django page !</h1>
+
+
+{% endblock %}
+
+{% block nav %}{% endblock %}

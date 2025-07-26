@@ -4,26 +4,20 @@
 {% block title %}
 All_chai page{% endblock %}
 
+{% block nav %}{% endblock %}
+
 {% block content %}
+
 <h1>Hello Welcome to the All_chia Page</h1>
- <section>
-            <nav>
-                
-                <ul class='nav-link'>
-                    
-                
-                    <li><a href='/'>Home</a>
-                
-                
-                    <li><a href='service/'>Service</a>
-                
-                
-                    <li><a href='#'>Aboutus</a>
-                
-                
-                    <li><a href='#'>Login</a>
-                </ul>
-            </div>
-            </nav>
-        </section>
+ 
+{% for chai in chais %}
+<div class="chai_item">
+    <img src="{{chai.image.url}}" alt="iamges">
+    <h3>{{chai.name}}</h3>
+    test
+
+</div>
+
+{%endfor%}
+
 {% endblock %}

@@ -1,17 +1,24 @@
 {% load static tailwind_tags %}
 {% load static %}
+{% include "header.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width={% load static %}, initial-scale=1.0">
     {% block title %} Default value{% endblock %}
-    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     {% tailwind_css %}
 </head>
 <body>
-   {% block content %}{% endblock %}
-    
+  
+   {%block nav%} {% endblock %}
+   {% block content %}
+   <h1 class='bg-blue-500 text-3xl'>Hello Welcome this is a nav Home Page</h1>
+
+
+   {% endblock %}
 
 </body>
 </html>

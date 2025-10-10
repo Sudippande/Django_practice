@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Welcome to the Home page </h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Images</th>
+            <th>Videos</th>
+            <th>Edit  /  Delete</th>
+        </tr>
+        {% for form in for %}
+        <tr>
+            <td>{{form.name}}</td>
+            <td>{{form.age}}</td>
+            <td>{{form.email}}</td>
+            <td>{{form.address}}</td>
+            <td>
+            {% if form.image%}
+            <img src="{{form.image.url}}" alt="Form_Image" width='100px'>
+            {% endif %}
+            </td>
+            <td>
+            {% if form.video%}
+           
+                <video width="200" height="150" controls>
+                <source src="{{ form.video.url }}" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+            {% endif %}
+            </td>
+
+           <td> 
+            <button><a href="{% url 'edit' form.id %}">Edit</a></button>
+            <button><a href="{% url 'delete' form.id %}">Delete</a></button>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button><a href="{% url 'form_data' %}">Add Data</a></button>
+</body>
+</html>

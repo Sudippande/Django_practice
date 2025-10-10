@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <h1>Form fill Out </h1>
+    <form action="{% url 'form_data' %}" method='post' enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type='submit'>Submit</button>
+        <button><a href="{% url "index" %}">View Your Data</a></button>
+    </form>
+    
+</body>
+</html>
